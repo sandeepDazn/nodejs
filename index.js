@@ -7,7 +7,7 @@ app.get("/testing", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("welcome page")
+  res.send("welcome page");
 });
 
 app.listen(8080, () => {
