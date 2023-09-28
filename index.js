@@ -3,8 +3,11 @@ const express = require("express");
 const app = express();
 
 app.get("/testing", (req, res) => {
-   
   res.send("hello sandeep world");
+});
+
+app.get("/", (req, res) => {
+  res.send("welcome page");
 });
 
 app.listen(8080, () => {

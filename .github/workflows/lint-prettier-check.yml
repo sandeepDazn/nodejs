@@ -1,0 +1,32 @@
+name: Lint and Prettier Check
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint-prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14 # You can change this to your preferred Node.js version
+
+      - name: Install Dependencies
+        run: npm install # or use yarn if you prefer
+
+      - name: Lint and Prettier Check
+        run: |
+          # Run linting (e.g., ESLint)
+          npm run lint # Replace with your linting command
+          
+          # Run Prettier check
+          npm run prettier:check # Replace with your Prettier check command
+        # You may add additional steps for other checks or tests
+
