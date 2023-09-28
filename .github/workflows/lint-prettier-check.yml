@@ -1,10 +1,13 @@
 name: Lint and Prettier Check
 
 on:
-  push:
-    branches:
-      - main
-
+    push:
+      branches:
+        - main # Adjust this to your main branch name
+    pull_request:
+      branches:
+        - main
+        
 jobs:
   lint-prettier:
     runs-on: ubuntu-latest
